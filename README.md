@@ -1,2 +1,2 @@
 # dsaa
-Data Structures and lgorithm Analysis in java
+Data Structures and Algorithm Analysis in java
