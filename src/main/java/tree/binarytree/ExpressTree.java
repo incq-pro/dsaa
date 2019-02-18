@@ -3,19 +3,19 @@ package tree.binarytree;
 import java.util.LinkedList;
 
 public class ExpressTree {
-    private BinaryNode root;
+    private BinaryNode<String> root;
 
     public boolean parseSuffix(String exp) {
         String[] elements = exp.split(" ");
-        LinkedList<BinaryNode> stack = new LinkedList<>();
+        LinkedList<BinaryNode<String>> stack = new LinkedList<>();
         for(String x : elements) {
-            BinaryNode bn;
+            BinaryNode<String> bn;
             if (isOp(x)) {
-                BinaryNode right = stack.pollLast();
-                BinaryNode left = stack.pollLast();
-                bn = new BinaryNode(x, left, right);
+                BinaryNode<String> right = stack.pollLast();
+                BinaryNode<String> left = stack.pollLast();
+                bn = new BinaryNode<>(x, left, right);
             } else {
-                bn = new BinaryNode(x, null, null);
+                bn = new BinaryNode<>(x, null, null);
             }
             stack.add(bn);
         }
@@ -29,7 +29,7 @@ public class ExpressTree {
         return sb.toString();
     }
 
-    private void printSuffix(BinaryNode root, StringBuffer sb) {
+    private void printSuffix(BinaryNode<String> root, StringBuffer sb) {
         if (root == null) {
             return;
         }
