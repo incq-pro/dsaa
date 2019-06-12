@@ -4,8 +4,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 /**
@@ -45,6 +43,18 @@ public class SortsTest {
     @Test
     public void selectionSort() {
         Sorts.selectionSort(a);
+        checkA();
+    }
+
+    @Test
+    public void quickSort() {
+        Sorts.quickSort(a);
+        checkA();
+    }
+
+    @Test
+    public void mergeSort() {
+        Sorts.mergeSort(a);
         checkA();
     }
 

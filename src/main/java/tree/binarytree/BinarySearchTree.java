@@ -34,7 +34,6 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         return findMin(root).getElement();
     }
 
-    // todo impl
     public void remove(T x) {
         root = remove(x, root);
     }
@@ -47,7 +46,6 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         return size(root);
     }
 
-    // todo impl
     public void printTree() {
         printTree(root);
     }
