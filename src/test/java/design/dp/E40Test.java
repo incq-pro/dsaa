@@ -12,11 +12,14 @@ public class E40Test {
     @Test
     public void minPath() {
         int[][] nodes = {
-                {1},
-                {1,2},
-                {1,2,3}
+                {5},
+                {7, 8},
+                {2, 3, 4},
+                {4, 9, 6, 1},
+                {2, 7, 9, 4, 5},
         };
         int x = E40.minPath(nodes, nodes.length);
-        assertEquals(3, x);
+        System.out.println(x);
+//        assertEquals(3, x);
     }
 }
