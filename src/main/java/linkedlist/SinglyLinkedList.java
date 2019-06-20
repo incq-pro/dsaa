@@ -6,7 +6,7 @@ package linkedlist;
 public class SinglyLinkedList {
 
     private Node head;
-    int size;
+    private int size;
 
     public SinglyLinkedList() {
     }
@@ -78,10 +78,82 @@ public class SinglyLinkedList {
         return true;
     }
 
+    public void reverse() {
+        Node pre = null;
+        Node current = head;
+        while (current != null) {
+            Node next = current.next;
+            current.next = pre;
+            pre = current;
+            current = next;
+        }
+        head = pre;
+    }
+
+    public boolean checkCircle() {
+        if (head == null) {
+            return false;
+        }
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (fast == slow) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public int getMiddle() {
+        if (head == null) {
+            return -1;
+        }
+        Node slow = head;
+        Node fast = head;
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow.value;
+    }
+
+    public static SinglyLinkedList merge(SinglyLinkedList a, SinglyLinkedList b) {
+        SinglyLinkedList c = new SinglyLinkedList();
+        Node pa = a.head;
+        Node pb = b.head;
+        while (pa != null && pb != null) {
+            if (pa.value <= pb.value) {
+                c.add(pa.value);
+                pa = pa.next;
+            } else {
+                c.add(pb.value);
+                pb = pb.next;
+            }
+        }
+        while (pa != null) {
+            c.add(pa.value);
+            pa = pa.next;
+        }
+        while (pb != null) {
+            c.add(pb.value);
+            pb = pb.next;
+        }
+        return c;
+    }
+
+    public void deleteLastKth(int k) {
+        if (k <= 0 || k > size) {
+            throw new IndexOutOfBoundsException();
+        }
+
+    }
+
     public static class Node {
         int value;
         Node next;
-
 
         Node(int value, Node next) {
             this.value = value;

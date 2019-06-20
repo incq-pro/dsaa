@@ -79,4 +79,61 @@ public class SinglyLinkedListTest {
         l.add(20);
         l.delete(l.size());
     }
+
+    @Test
+    public void reverse() {
+        SinglyLinkedList l = new SinglyLinkedList();
+        for (int i = 0; i < 4; i++) {
+            l.add(i);
+        }
+        for (int i = 0; i < 4; i++) {
+            assertEquals(i, l.get(i));
+        }
+        l.reverse();
+        for (int i = 0; i < 4; i++) {
+            assertEquals(4 - i - 1, l.get(i));
+        }
+    }
+
+    @Test
+    public void checkCircle() {
+        SinglyLinkedList l = new SinglyLinkedList();
+        assertFalse(l.checkCircle());
+
+        for (int i = 0; i < 4; i++) {
+            l.add(i);
+        }
+        assertFalse(l.checkCircle());
+    }
+
+    @Test
+    public void getMiddle() {
+        SinglyLinkedList l = new SinglyLinkedList();
+        assertEquals(-1, l.getMiddle());
+
+        for (int i = 0; i < 4; i++) {
+            l.add(i);
+        }
+        assertEquals(1, l.getMiddle());
+
+        l.add(5);
+        assertEquals(2, l.getMiddle());
+    }
+
+    @Test
+    public void merge() {
+        SinglyLinkedList a = new SinglyLinkedList();
+        SinglyLinkedList b = new SinglyLinkedList();
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                a.add(i);
+            } else {
+                b.add(i);
+            }
+        }
+        SinglyLinkedList c = SinglyLinkedList.merge(a, b);
+        for(int i = 0; i < 10; i++) {
+            assertEquals(i, c.get(i));
+        }
+    }
 }
