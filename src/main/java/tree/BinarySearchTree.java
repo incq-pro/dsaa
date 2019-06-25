@@ -83,6 +83,25 @@ public class BinarySearchTree {
         }
     }
 
+    public Node pre(Node p) {
+        if (root == null) {
+            return null;
+        }
+        Node x = root;
+        Node preNode = x.left;
+        while (x != null) {
+            if (x.data > p.data) {
+                x = x.left;
+                preNode = x.left;
+            } else if (x.data < p.data) {
+                preNode = x;
+                x = x.right;
+            } else {
+                return preNode;
+            }
+        }
+        return null;
+    }
 
     public static class Node {
         int data;

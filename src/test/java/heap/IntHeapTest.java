@@ -2,20 +2,18 @@ package heap;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.*;
 
 /**
  * @author yun.516@gmail.com
  */
-public class HeapTest {
+public class IntHeapTest {
     @Test
     public void testHeap() {
         final int n = 5;
-        Heap p = new Heap(n);
+        IntHeap p = new IntHeap(n);
         for (int i = 0; i < n; i++) {
-            assertTrue(p.insert(i));
+            assertTrue(p.add(i));
         }
 
         for (int i = n - 1; i >= 0; i--) {
@@ -26,7 +24,7 @@ public class HeapTest {
     @Test
     public void sort() {
         int[] a = {6, 7, 5, 8, 4, 9, 2, 1};
-        Heap.sort(a);
+        IntHeap.sort(a);
         for (int i = 0; i < a.length - 1; i++) {
             assertTrue(a[i] < a[i + 1]);
         }

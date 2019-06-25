@@ -26,12 +26,19 @@ public class SortsTest {
     public void bubbleSort() {
         Sorts.bubbleSort(a);
         checkA();
+
     }
 
     @Test
     public void bubbleSort2() {
         Sorts.bubbleSort2(a);
         checkA();
+        int[] b = {9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
+        Sorts.bubbleSort(b);
+        for (int i = 0; i < 10; i++) {
+            assertEquals(i, b[i]);
+            assertEquals((i + 1) * 10, b[i + 10]);
+        }
     }
 
     @Test

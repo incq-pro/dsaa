@@ -3,88 +3,92 @@ package heap;
 /**
  * @author yun.516@gmail.com
  */
-public class Heap {
-    private int[] a;
-    private int size;
+public abstract class Heap<T extends Comparable<T>> {
+    T[] data;
+    int size = 0;
 
+    @SuppressWarnings("unchecked")
     public Heap(int capacity) {
-        a = new int[capacity];
-        size = 0;
+        data = (T[]) new Comparable[capacity];
     }
 
-    public boolean insert(int data) {
-        if (size >= a.length) {
-            return false;
+    public int size() {
+        return this.size;
+    }
+
+    public void add(T v) {
+        if (size < data.length) {
+            int i = size++;
+            data[i] = v;
+            heapifyDownUp(i);
+        } else {
+            data[0] = v;
+            heapifyUpDown(size - 1, 0);
         }
-        a[size++] = data;
-        heapifyDownUp(a, size - 1);
-        return true;
     }
 
-    public int popHead() {
+    public T getHead() {
         if (size <= 0) {
-            return -1;
+            return null;
         }
-        int ret = a[0];
-        a[0] = a[--size];
-        heapify(a, size, 0);
+        return data[0];
+    }
+
+    public T popHead() {
+        if (size <= 0) {
+            return null;
+        }
+        T ret = data[0];
+        data[0] = data[--size];
+        heapifyUpDown(size - 1, 0);
         return ret;
     }
 
-    public static void sort(int[] a) {
-        buildHeap(a, a.length);
-        // i is last_pos-1
-        for (int i = a.length - 1; i > 0; i--) {
-            swap(a, 0, i);
-            heapify(a, i, 0);
+    void heapifyDownUp(int i) {
+        int p = parent(i);
+        while (i > 0 && compare(data[i], data[p]) < 0) {
+            swap(data, i, p);
+            i = p;
+            p = parent(i);
         }
     }
 
-    private static void buildHeap(int[] a, int n) {
-        for (int i = (n - 1) / 2; i >= 0; i--) {
-            heapify(a, a.length, i);
-        }
-    }
-
-    private static void heapify(final int[] a, final int n, int i) {
+    void heapifyUpDown(int n, int i) {
         while (true) {
-            int maxPos = i;
-            if (left(i) < n && a[left(i)] > a[i]) {
-                maxPos = left(i);
+            int minI = i;
+            int left = left(i);
+            if (left <= n && compare(data[left], data[minI]) < 0) {
+                minI = left;
             }
-            if (right(i) < n && a[right(i)] > a[maxPos]) {
-                maxPos = right(i);
+            int right = right(i);
+            if (right <= n && compare(data[right], data[minI]) < 0) {
+                minI = right;
             }
-            if (maxPos == i) {
-                return;
+            if (minI == i) {
+                break;
             }
-            swap(a, i, maxPos);
-            i = maxPos;
+            swap(data, i, minI);
+            i = minI;
         }
     }
 
-    private static void heapifyDownUp(int[] a, int i) {
-        while (parent(i) >= 0 && a[i] > a[parent(i)]) {
-            swap(a, i, parent(i));
-            i = parent(i);
-        }
-    }
-
-    private static void swap(int[] a, int i, int j) {
-        int tmp = a[i];
-        a[i] = a[j];
-        a[j] = tmp;
-    }
-
-    private static int parent(int i) {
-        return (i - 1) / 2;
-    }
+    abstract int compare(T a, T b);
 
     private static int left(int i) {
-        return 2 * i + 1;
+        return (i << 1) + 1;
     }
 
     private static int right(int i) {
-        return 2 * i + 2;
+        return (i << 1) + 2;
+    }
+
+    private static int parent(int i) {
+        return (i - 1) >> 1;
+    }
+
+    private static <T> void swap(T[] a, int l, int r) {
+        T tmp = a[l];
+        a[l] = a[r];
+        a[r] = tmp;
     }
 }
