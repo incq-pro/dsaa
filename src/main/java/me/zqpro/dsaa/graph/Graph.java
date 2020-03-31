@@ -1,4 +1,4 @@
-package graph;
+package me.zqpro.dsaa.graph;
 
 import java.util.LinkedList;
 

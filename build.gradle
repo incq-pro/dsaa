@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'net.zqyun.study'
+group 'me.zqpro.dsaa'
 version '1.0'
 
 sourceCompatibility = 1.8

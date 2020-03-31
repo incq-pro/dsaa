@@ -1,4 +1,4 @@
-package linkedlist;
+package me.zqpro.dsaa.linkedlist;
 
 import org.junit.Test;
 

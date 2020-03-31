@@ -1,4 +1,4 @@
-package hash;
+package me.zqpro.dsaa.hash;
 
 import java.util.Iterator;
 import java.util.LinkedList;

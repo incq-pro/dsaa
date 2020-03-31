@@ -1,4 +1,4 @@
-package linkedlist;
+package me.zqpro.dsaa.linkedlist;
 
 /**
  * @author yun.516@gmail.com

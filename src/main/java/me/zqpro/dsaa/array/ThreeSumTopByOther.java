@@ -19,7 +19,7 @@ public class ThreeSumTopByOther {
         int max = Math.max(nums[len - 1], Math.abs(nums[0])); //to allocate enough space to avoid check in if statement
 
         byte[] hash = new byte[(max << 1) + 1];
-        for (int v : nums) { //hash and count appearing times of every num
+        for (int v : nums) { //me.zqpro.dsaa.hash and count appearing times of every num
             hash[v + max]++;
         }
 
