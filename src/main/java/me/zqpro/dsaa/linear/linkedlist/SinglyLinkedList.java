@@ -1,4 +1,4 @@
-package me.zqpro.dsaa.linkedlist;
+package me.zqpro.dsaa.linear.linkedlist;
 
 /**
  * @author yun.516@gmail.com
