@@ -1,7 +1,4 @@
-package array;
-
-import java.util.HashMap;
-import java.util.Map;
+package me.zqpro.dsaa.linear.array;
 
 /**
  * @author yun.516@gmail.com

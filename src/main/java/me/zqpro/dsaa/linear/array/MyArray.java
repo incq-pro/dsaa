@@ -1,4 +1,4 @@
-package array;
+package me.zqpro.dsaa.linear.array;
 
 /**
  * @author zhangqiang
@@ -57,5 +57,11 @@ public class MyArray {
         }
         --size;
         return true;
+    }
+
+    public void addAll(Iterable<? extends Integer> items) {
+        for(Integer i : items) {
+            add(i);
+        }
     }
 }

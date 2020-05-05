@@ -1,4 +1,4 @@
-package stack;
+package me.zqpro.dsaa.linear.stack;
 
 /**
  * @author yun.516@gmail.com

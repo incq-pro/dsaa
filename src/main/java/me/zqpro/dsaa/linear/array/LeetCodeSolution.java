@@ -1,4 +1,4 @@
-package array;
+package me.zqpro.dsaa.linear.array;
 
 /**
  * @author yun.516@gmail.com

@@ -1,4 +1,4 @@
-package queue;
+package me.zqpro.dsaa.linear.queue;
 
 /**
  * @author yun.516@gmail.com

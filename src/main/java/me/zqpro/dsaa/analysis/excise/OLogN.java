@@ -1,4 +1,4 @@
-package me.zqpro.dsaa.analysis;
+package me.zqpro.dsaa.analysis.excise;
 
 /**
  * O(logN)

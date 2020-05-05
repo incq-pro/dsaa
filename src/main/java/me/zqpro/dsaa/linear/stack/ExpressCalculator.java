@@ -1,4 +1,4 @@
-package stack;
+package me.zqpro.dsaa.linear.stack;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,8 +25,8 @@ public class ExpressCalculator {
     }
 
     public static int op(String v1, String op, String v2) {
-        int i1 = Integer.valueOf(v1);
-        int i2 = Integer.valueOf(v2);
+        int i1 = Integer.parseInt(v1);
+        int i2 = Integer.parseInt(v2);
         switch (op) {
             case "+":
                 return i1 + i2;
@@ -70,6 +70,6 @@ public class ExpressCalculator {
             int v3 = op(v1, opItem, v2);
             stack1.push("" + v3);
         }
-        return Integer.valueOf(stack1.pop());
+        return Integer.parseInt(stack1.pop());
     }
 }

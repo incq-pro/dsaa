@@ -1,4 +1,4 @@
-package tree;
+package me.zqpro.dsaa.tree;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ public class E10Test {
 
     @Test
     public void list() throws IOException {
-        E10 e = new E10();
+        tree.E10 e = new tree.E10();
         e.list(new File(".").getCanonicalPath());
     }
 }

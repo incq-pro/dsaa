@@ -1,4 +1,4 @@
-package array;
+package me.zqpro.dsaa.linear.array;
 
 import java.util.ArrayList;
 import java.util.Arrays;

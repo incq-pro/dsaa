@@ -151,6 +151,17 @@ public class SinglyLinkedList {
 
     }
 
+    public boolean contains(int value) {
+        Node p = head;
+        while (p != null) {
+            if (p.value == value) {
+                return true;
+            }
+            p = p.next;
+        }
+        return false;
+    }
+
     public static class Node {
         int value;
         Node next;
@@ -159,5 +170,16 @@ public class SinglyLinkedList {
             this.value = value;
             this.next = next;
         }
+    }
+
+    public static void main(String[] args) {
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+        singlyLinkedList.add(1);
+        singlyLinkedList.add(2);
+        singlyLinkedList.add(3);
+        System.out.println(singlyLinkedList.contains(0));
+        System.out.println(singlyLinkedList.contains(1));
+        System.out.println(singlyLinkedList.contains(2));
+        System.out.println(singlyLinkedList.contains(3));
     }
 }
