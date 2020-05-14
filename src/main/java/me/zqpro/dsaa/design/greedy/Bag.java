@@ -15,13 +15,7 @@ public class Bag {
         Arrays.sort(beans, (a, b) -> {
             double pa = (double) a[1] / a[0];
             double pb = (double) b[1] / b[0];
-            if (pa > pb) {
-                return -1;
-            } else if (pa < pb) {
-                return 1;
-            } else {
-                return 0;
-            }
+            return Double.compare(pb, pa);
         });
         double value = 0.0;
         int c = capacity;
