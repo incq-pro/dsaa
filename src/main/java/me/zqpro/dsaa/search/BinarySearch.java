@@ -1,4 +1,4 @@
-package search;
+package me.zqpro.dsaa.search;
 
 /**
  * @author yun.516@gmail.com

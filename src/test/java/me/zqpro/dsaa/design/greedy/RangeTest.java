@@ -1,10 +1,8 @@
-package design.greedy;
+package me.zqpro.dsaa.design.greedy;
 
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 /**
  * @author yun.516@gmail.com

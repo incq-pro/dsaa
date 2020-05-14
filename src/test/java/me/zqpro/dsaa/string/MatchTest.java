@@ -1,8 +1,8 @@
-package string;
+package me.zqpro.dsaa.string;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author yun.516@gmail.com

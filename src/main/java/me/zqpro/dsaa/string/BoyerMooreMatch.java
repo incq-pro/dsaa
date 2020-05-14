@@ -1,6 +1,4 @@
-package string;
-
-import java.util.Arrays;
+package  me.zqpro.dsaa.string;
 
 /**
  * @author yun.516@gmail.com

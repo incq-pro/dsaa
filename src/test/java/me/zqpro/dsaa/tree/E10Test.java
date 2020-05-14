@@ -9,7 +9,7 @@ public class E10Test {
 
     @Test
     public void list() throws IOException {
-        tree.E10 e = new tree.E10();
+        E10 e = new E10();
         e.list(new File(".").getCanonicalPath());
     }
 }

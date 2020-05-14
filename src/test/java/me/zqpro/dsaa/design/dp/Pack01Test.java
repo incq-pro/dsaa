@@ -1,8 +1,8 @@
-package design.dp;
+package me.zqpro.dsaa.design.dp;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author yun.516@gmail.com

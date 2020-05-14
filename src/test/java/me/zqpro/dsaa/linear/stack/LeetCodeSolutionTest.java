@@ -1,4 +1,4 @@
-package stack;
+package me.zqpro.dsaa.linear.stack;
 
 import org.junit.Before;
 import org.junit.Test;

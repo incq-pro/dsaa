@@ -1,4 +1,4 @@
-package tree;
+package me.zqpro.dsaa.tree;
 
 /**
  * @author yun.516@gmail.com

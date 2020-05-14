@@ -1,4 +1,4 @@
-package tree.binarytree;
+package me.zqpro.dsaa.tree.binarytree;
 
 public class BinarySearchTree<T extends Comparable<? super T>> {
     private BinaryNode<T> root;

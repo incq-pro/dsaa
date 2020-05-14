@@ -1,4 +1,4 @@
-package sort;
+package me.zqpro.dsaa.sort;
 
 /**
  * @author yun.516@gmail.com

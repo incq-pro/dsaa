@@ -1,4 +1,4 @@
-package tree.binarytree2;
+package me.zqpro.dsaa.tree.binarytree2;
 
 /**
  * @author yun.516@gmail.com

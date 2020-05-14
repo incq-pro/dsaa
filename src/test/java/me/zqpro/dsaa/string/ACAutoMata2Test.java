@@ -1,10 +1,10 @@
-package string;
+package me.zqpro.dsaa.string;
 
 import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author yun.516@gmail.com

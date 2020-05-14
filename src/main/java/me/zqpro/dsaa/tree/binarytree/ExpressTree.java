@@ -1,4 +1,4 @@
-package tree.binarytree;
+package me.zqpro.dsaa.tree.binarytree;
 
 import java.util.LinkedList;
 

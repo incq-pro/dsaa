@@ -1,4 +1,4 @@
-package queue;
+package me.zqpro.dsaa.linear.queue;
 
 import org.junit.Test;
 

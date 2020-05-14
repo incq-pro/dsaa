@@ -1,4 +1,4 @@
-package tree.avltree;
+package me.zqpro.dsaa.tree.avltree;
 
 public class AvlTree<T extends Comparable<? super T>> {
 

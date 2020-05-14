@@ -1,8 +1,6 @@
-package design.dp;
+package me.zqpro.dsaa.design.dp;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author yun.516@gmail.com

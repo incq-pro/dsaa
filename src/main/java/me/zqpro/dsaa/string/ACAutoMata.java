@@ -1,4 +1,4 @@
-package string;
+package me.zqpro.dsaa.string;
 
 import java.util.HashMap;
 import java.util.LinkedList;

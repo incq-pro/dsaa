@@ -1,4 +1,4 @@
-package tree;
+package me.zqpro.dsaa.tree;
 
 import java.io.File;
 

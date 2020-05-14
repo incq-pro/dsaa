@@ -1,10 +1,10 @@
-package sort;
+package me.zqpro.dsaa.sort;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author yun.516@gmail.com

@@ -1,4 +1,4 @@
-package misc;
+package me.zqpro.dsaa.misc;
 
 /**
  * @author yun.516@gmail.com

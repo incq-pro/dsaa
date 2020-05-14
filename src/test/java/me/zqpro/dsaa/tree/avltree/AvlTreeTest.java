@@ -1,8 +1,6 @@
-package tree.avltree;
+package me.zqpro.dsaa.tree.avltree;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class AvlTreeTest {
     @Test

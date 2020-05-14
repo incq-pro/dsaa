@@ -1,4 +1,4 @@
-package design.greedy;
+package me.zqpro.dsaa.design.greedy;
 
 /**
  * @author yun.516@gmail.com

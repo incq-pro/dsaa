@@ -1,4 +1,4 @@
-package tree.binarytree;
+package me.zqpro.dsaa.tree.binarytree;
 
 public class BinaryNode<T> {
     private T element;
