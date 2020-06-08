@@ -8,7 +8,7 @@ public class ExpressTree {
     public boolean parseSuffix(String exp) {
         String[] elements = exp.split(" ");
         LinkedList<BinaryNode<String>> stack = new LinkedList<>();
-        for(String x : elements) {
+        for (String x : elements) {
             BinaryNode<String> bn;
             if (isOp(x)) {
                 BinaryNode<String> right = stack.pollLast();

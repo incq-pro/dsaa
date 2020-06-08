@@ -1,5 +1,7 @@
 package me.zqpro.dsaa.linear.linkedlist;
 
+import java.util.Stack;
+
 /**
  * @author yun.516@gmail.com
  */
@@ -78,6 +80,9 @@ public class SinglyLinkedList {
         return true;
     }
 
+    /**
+     * reverse with O(1) space
+     */
     public void reverse() {
         Node pre = null;
         Node current = head;
@@ -162,6 +167,63 @@ public class SinglyLinkedList {
         return false;
     }
 
+    /**
+     * reverse with a stack
+     */
+    public void reverseWithStack() {
+        if (head == null) {
+            return;
+        }
+        Stack<Node> stack = new Stack<>();
+        Node p = head;
+        while (p != null) {
+            stack.push(p);
+            p = p.next;
+        }
+        head = stack.pop();
+        p = head;
+        while (!stack.isEmpty()) {
+            Node p2 = stack.pop();
+            p.next = p2;
+            p = p2;
+        }
+        p.next = null;
+    }
+
+    public void reverseRecursive() {
+        Node p = doReverseRecursive(head);
+        if (p != null) {
+            p.next = null;
+        }
+    }
+
+    /**
+     *
+     * @param
+     * @return tail
+     */
+    private Node doReverseRecursive(Node p) {
+        if (p == null) {
+            return null;
+        }
+        if (p.next == null) {
+            head = p;
+            return p;
+        }
+        Node p2 = doReverseRecursive(p.next);
+        p2.next = p;
+        return p;
+    }
+
+    public void print() {
+        Node p = head;
+        while (p != null) {
+            System.out.printf("%d ", p.value);
+            p = p.next;
+        }
+        System.out.println();
+    }
+
     public static class Node {
         int value;
         Node next;
@@ -172,6 +234,7 @@ public class SinglyLinkedList {
         }
     }
 
+
     public static void main(String[] args) {
         SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
         singlyLinkedList.add(1);
@@ -181,5 +244,8 @@ public class SinglyLinkedList {
         System.out.println(singlyLinkedList.contains(1));
         System.out.println(singlyLinkedList.contains(2));
         System.out.println(singlyLinkedList.contains(3));
+        singlyLinkedList.print();
+        singlyLinkedList.reverseRecursive();
+        singlyLinkedList.print();
     }
 }
