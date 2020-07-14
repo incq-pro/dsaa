@@ -82,7 +82,7 @@ public class AvlTree<T extends Comparable<? super T>> {
         return t;
     }
 
-    private static int ALLOWED_IMBALANCE = 1;
+    private static final int ALLOWED_IMBALANCE = 1;
 
     private AvlNode<T> balance(AvlNode<T> t) {
         if (t == null) {
