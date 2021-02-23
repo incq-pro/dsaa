@@ -1,5 +1,8 @@
 package pro.incq.leetcode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * leetcode
  */
@@ -32,6 +35,20 @@ public class Solution {
             nodeM.next = cur;
             return pre;
         }
+    }
+
+    public List<Boolean> prefixesDivBy5(int[] A) {
+        if (A == null || A.length == 0) {
+            return new ArrayList<>();
+        }
+        List<Boolean> result = new ArrayList<>(A.length);
+        int sum = 0;
+        int n = A.length;
+        for(int i = 0; i < n; i++) {
+            sum = ((sum << 1) + A[i]) % 10;
+            result.add((sum == 0 || sum == 5));
+        }
+        return result;
     }
 
     public static void main(String[] args) {

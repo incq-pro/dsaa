@@ -6,11 +6,10 @@ package pro.incq.dsaa.design.dp;
 public class Pack01 {
     /**
      * @param weight items weight
-     * @param n      items count
-     * @param w      pack weight
      * @return max pack
      */
-    public static int knapsack(int[] weight, int n, int w) {
+    public static int knapsack(int[] weight, int w) {
+        int n = weight.length;
         boolean[][] state = new boolean[n][w + 1];
         state[0][0] = true;
         if (weight[0] <= w) {
@@ -38,7 +37,8 @@ public class Pack01 {
         return 0;
     }
 
-    public static int knapsack2(int[] weight, int n, int w) {
+    public static int knapsack2(int[] weight, int w) {
+        int n = weight.length;
         boolean[] state = new boolean[w + 1];
         state[0] = true;
         if (weight[0] <= w) {
