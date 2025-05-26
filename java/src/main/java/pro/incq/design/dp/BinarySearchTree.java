@@ -1,7 +1,7 @@
 package pro.incq.design.dp;
 
 import org.apache.commons.lang3.tuple.Pair;
-import pro.incq.leetcode.common.TreeNode;
+import pro.incq.design.common.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -27,7 +27,6 @@ public class Heap {
                 if (c1 + 1 < size && data[c1] < data[c1 + 1]) {
                     c1 = c1 + 1;
                 }
-                if (c1 < size &&
             }
         }
 
